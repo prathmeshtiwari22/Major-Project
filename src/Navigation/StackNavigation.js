@@ -10,6 +10,8 @@ import ChapterList from '../components/ChapterList';
 import ShowPDF from '../components/ShowPdf';
 import PaperHome from '../components/PaperHome';
 import ChapterList2 from '../components/ChapterList2';
+import BudgetScreen from '../components/BudgetScreen';
+import CourseDetailScreen from '../components/CourseDetailScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +45,8 @@ const StackNavigation = () => {
             title: route.params.title || 'Previous Year Paper',
           })}
         />
+         <Stack.Screen name="BudgetScreen" component={BudgetScreen} />
+         <Stack.Screen name="CourseDetailScreen" component={CourseDetailScreen} />
     </Stack.Navigator>
   );
 };
@@ -73,7 +77,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen
         name="Quiz"
-        component={Quiz}
+        component={BudgetScreen}
         options={{
           title: 'Quiz',
           headerShown:false,
