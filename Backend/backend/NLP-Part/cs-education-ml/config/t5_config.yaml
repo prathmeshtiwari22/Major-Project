@@ -1,0 +1,6 @@
+model_name: "t5-small"
+lora_rank: 8
+batch_size: 4
+max_length: 256
+learning_rate: 3e-4
+num_epochs: 5
